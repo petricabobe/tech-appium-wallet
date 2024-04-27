@@ -45,6 +45,7 @@ This project shows Appium and Serenity Cucumber framework integration to run sam
 ```
 3. Access on project '/target/site/serenity/index.html' and open Chrome browser to see results dashboards.
 
+<img width="1494" alt="image" src="https://github.com/petricabobe/tech-appium-wallet/assets/93666275/e13bf3ff-1c9e-46fa-8145-7adc7e22927e">
 
 ---
 
