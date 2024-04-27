@@ -8,8 +8,8 @@ This project shows Appium and Serenity Cucumber framework integration to run sam
 #### Install the items
 
 * Android Studio (last version).
-* Java Development Kit 17 + (This project used JDK 16).
-* Appium 2.1.0 (latest).
+* Java Development Kit 17 + .
+* Appium 2.5.4 (latest).
 * Configure the environments variable JAVA_HOME, ANDROID_HOME and PATH
 * Create Android and iOS simulators or devices
 ---

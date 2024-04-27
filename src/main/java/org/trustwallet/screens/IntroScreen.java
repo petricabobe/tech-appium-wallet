@@ -1,7 +1,7 @@
 package org.trustwallet.screens;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import net.thucydides.core.pages.PageObject;
+import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,7 +13,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 public class IntroScreen extends PageObject {
     WebDriverWait wait;
 
-    IntroScreen(WebDriver driver) {
+    public IntroScreen(WebDriver driver) {
         super(driver);
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }

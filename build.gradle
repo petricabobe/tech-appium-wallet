@@ -12,7 +12,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath "net.serenity-bdd:serenity-gradle-plugin:3.9.8"
+        classpath "net.serenity-bdd:serenity-gradle-plugin:4.1.10"
     }
 }
 
@@ -21,14 +21,12 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
 
-sourceCompatibility = 16
-targetCompatibility = 16
 
 dependencies {
-    implementation 'net.serenity-bdd:serenity-core:3.9.8'
-    implementation 'io.appium:java-client:8.5.1'
-    implementation 'net.serenity-bdd:serenity-junit:3.9.8'
-    testImplementation 'net.serenity-bdd:serenity-cucumber:3.9.8'
+    implementation 'net.serenity-bdd:serenity-core:4.1.10'
+    implementation 'io.appium:java-client:9.2.2'
+    implementation 'net.serenity-bdd:serenity-junit:4.1.10'
+    testImplementation 'net.serenity-bdd:serenity-cucumber:4.1.10'
     testImplementation 'io.cucumber:cucumber-junit:7.13.0'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
     testImplementation 'org.junit.vintage:junit-vintage-engine:5.10.0'
