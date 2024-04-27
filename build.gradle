@@ -1,0 +1,51 @@
+defaultTasks 'clean', 'test', 'aggregate'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.9.8"
+    }
+}
+
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+
+sourceCompatibility = 16
+targetCompatibility = 16
+
+dependencies {
+    implementation 'net.serenity-bdd:serenity-core:3.9.8'
+    implementation 'io.appium:java-client:8.5.1'
+    implementation 'net.serenity-bdd:serenity-junit:3.9.8'
+    testImplementation 'net.serenity-bdd:serenity-cucumber:3.9.8'
+    testImplementation 'io.cucumber:cucumber-junit:7.13.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testImplementation 'org.junit.vintage:junit-vintage-engine:5.10.0'
+    testImplementation 'org.junit.platform:junit-platform-launcher:1.10.0'
+    testImplementation 'org.hamcrest:hamcrest-core:2.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+gradle.startParameter.continueOnFailure = true
+serenity {
+    // Specify the root package of any JUnit acceptance tests
+    testRoot="org.trustwallet"
+
+    // Specify the root directory of any Cucumber feature files
+    requirementsDir = "src/test/resources/features"
+}
+
+test.finalizedBy(aggregate)
